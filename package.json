@@ -1,0 +1,15 @@
+{
+  "name": "obsidian-bookmarks-chrome",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Chrome extension: save the current page (and arXiv PDFs) into an Obsidian note via the Local REST API.",
+  "scripts": {
+    "test": "vitest run",
+    "icons": "node scripts/make-icons.mjs",
+    "check": "node scripts/check-manifest.mjs"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.2"
+  }
+}

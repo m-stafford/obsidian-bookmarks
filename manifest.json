@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Obsidian Bookmarks",
+  "version": "0.1.0",
+  "description": "Save the current page (and arXiv PDFs) to a note in your Obsidian vault via the Local REST API plugin.",
+  "permissions": ["activeTab", "storage", "notifications"],
+  "host_permissions": [
+    "https://arxiv.org/*",
+    "https://export.arxiv.org/*",
+    "http://127.0.0.1/*",
+    "https://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Save to Obsidian",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "commands": {
+    "save-page": {
+      "suggested_key": { "default": "Alt+Shift+S" },
+      "description": "Save the current page to Obsidian"
+    }
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
